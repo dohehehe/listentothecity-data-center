@@ -40,11 +40,16 @@ export function createDcLayers({ map, data, colorMap, sizeMap }) {
     };
 
     addLine('Operator:', d.operator);
-    addLine('Year:', d.year);
-    if (d.size) addLine('Area:', `${Number(d.size).toLocaleString()} m²`);
+    addLine('Region:', d.region);
+    addLine('Sector:', d.sector);
+    addLine('IT_mw:', d.it_mw);
     addLine('IT capacity:', d.it_cap ? `${d.it_cap} MW` : '');
     addLine('PUE:', d.pue);
     addLine('Cooling:', d.cooling);
+    addLine('Address:', d.addr);
+    addLine('Year:', d.year);
+    addLine('Accuracy:', d.accuracy);
+    addLine('Note:', d.note);
 
     if (meta.childNodes.length) root.appendChild(meta);
 
